@@ -1,0 +1,154 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+#profile-search-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+#profile-search-form label {
+    flex-basis: 100%;
+    margin-bottom: 10px;
+}
+#profile-search-form .form-group {
+    /* flex-basis: calc(25% - 10px); */
+    margin-right: 10px;
+    flex-basis: 100%;
+}
+#profile-search-form .form-group:last-child {
+    margin-right: 0;
+}
+#profile-search-form .form-group input[type="text"], #profile-search-form .form-group select, #profile-search-form .form-group input[type="number"] {
+    width: 99%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+#profile-search-form .form-group input[type="number"] {
+    width: 94%;
+}
+#profile-search-form .form-group select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6"><path d="M0 0l5 5 5-5z" fill="%23666"/></svg>') no-repeat right center;
+    background-size: 8px 10px;
+    padding-right: 20px;
+}
+
+#profile-search-form .two_column{
+    display: flex;
+    flex-basis: 100%;
+    column-gap: 30px;
+}
+
+#profile_search{
+    margin: 20px auto;
+    display: block;
+    background: #009688;
+    color: #fff;
+    border: 0;
+    padding: 10px;
+    width: 20%;
+    font-size: 16px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#profile_search:hover{
+    cursor: pointer;
+}
+
+.range_filter {
+    margin-top: 15px;
+}
+
+table {
+    width: 100% !important;
+}
+
+.profile-export {
+    text-align: right;
+}
+
+.profile-pagination {
+    width: 50%;
+    float: left;
+}
+
+@media (max-width: 768px) {
+    #profile-search-form .form-group {
+        flex-basis: calc(50% - 10px);
+        margin-right: 10px;
+    }
+    #profile-search-form .form-group:last-child {
+        margin-right: 0;
+    }
+    #profile-search-form .form-group:nth-child(4), #profile-search-form .form-group:nth-child(5) {
+        flex-basis: 100%;
+        margin-right: 0;
+    }
+}
+
+/*Loader CSS*/
+.display-none {
+    display: none !important;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,.8);
+    z-index: 999;
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+.lds-hourglass:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 32px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-hourglass 1.2s infinite;
+    margin: 50vh auto;
+}
+@keyframes lds-hourglass {
+    0% {
+        transform: rotate(0);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    50% {
+        transform: rotate(900deg);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    100% {
+        transform: rotate(1800deg);
+    }
+}
+
+#getDataBtn{
+    background: #e2e222;
+    border: 1px solid #e2e222;
+    padding:  10px 20px;
+}
+.text-center{
+    text-align: center;
+}
+#data-table table{
+    margin: 20px auto;
+}
+th.profile_sorting.sorting {
+    text-decoration: underline;
+}
